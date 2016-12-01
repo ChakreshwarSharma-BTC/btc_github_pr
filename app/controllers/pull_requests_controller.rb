@@ -2,8 +2,8 @@ class PullRequestsController < ApplicationController
   unloadable
 
   def index
-    project = Project.find(params[:project_id])
-    @pull_requests = PullRequest.where(project_id: project.id).order(id: :desc)
+    @project = Project.find(params[:project_id])
+    @pull_requests = PullRequest.where(project_id: @project.id).order(id: :desc)
   end
 
   def github_hook
