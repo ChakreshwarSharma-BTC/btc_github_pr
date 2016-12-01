@@ -9,6 +9,10 @@ for setup this plugin follow below given steps
   cd ..
   rake redmine:plugins:migrate
 
+- in your application.rb add config variable github_Secret_token
+    config.github_secret_token = "token_string"
+    replace token string from your ENV variable
+
 - goto to github.com and goto to settings tab in your repository
   than create webhook with following details
   
